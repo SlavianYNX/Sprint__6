@@ -28,7 +28,7 @@ class TestMainPage:
         dzen_page = DzenPage(driver)
         header_page.yandex_logo_click()
         header_page.go_to_new_tab()
-        dzen_page.find_and_wait_locator(DzenPageLocators.LOGO_DZEN)
+        dzen_page.check_element_logo_dzen()
         header_page.get_current_url()
         assert driver.current_url == Urls.DZEN_URL
         assert dzen_page.check_element_main_button()
